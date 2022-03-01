@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<p style="font-size:20px;"">Welcome to my QA Project</p>
+<p>Current database tables:</p>
+<br>
+<table>
+    <thead><tr><th>Engine ID</th><th>Engine Type</th><th>Engine CC</th><th>Engine Power</th></tr></thead>
+        {% for engine in engines  %}
+            <tbody>
+                <tr><td>{{engine.id}}</td><td>{{engine.type}}</td><td>{{engine.cc}}</td><td>{{engine.power}}</td></tr>
+            </tbody>
+        {% endfor %}
+</table>
+<br>
+<table>
+    <thead><tr><th>Car ID</th><th>Car Make</th><th>Car Model</th><th>Registration</th></tr></thead>
+        {% for car in cars  %}
+            <tbody>
+                <tr><td>{{car.id}}</td><td>{{car.make}}</td><td>{{car.model}}</td><td>{{car.registration}}</td></tr>
+            </tbody>
+        {% endfor %}
+</table>
+
+
+{% endblock body_content %}

@@ -1,0 +1,26 @@
+{% block content %}
+    <h1>Update Car</h1>
+    <p>
+    {{new.id}}. Make <b>{{ new.make }}</b> Model <b>{{new.model}}</b> Registration <b>{{new.registration}}</b>
+    </p>
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            <p>
+                {{ form.make.label }}<br>
+                {{ form.make (size=32) }}
+            </p>
+            <p>
+                {{ form.model.label }}<br>
+                {{ form.model (size=32) }}
+            </p>
+            <p>
+                {{ form.registration.label }}<br>
+                {{ form.registration (size=32) }}
+            </p>
+            
+            <p> {{ form.submit }}</p>
+        </p>
+    </form>
+{% endblock content %}

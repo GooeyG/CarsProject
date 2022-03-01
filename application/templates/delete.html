@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <form action="" method="post" novalidate>
+        {{form.hidden_tag()}}
+        <p>
+            {{form.question.label}}
+            {{form.question}}
+                {% if form.question.errors %}
+                    {% for error in form.question.errors %}
+                        {{ error }}<br>
+                    {% endfor %}
+                {% endif %}
+            <br>
+            {{form.id.label}}
+            {{form.id (size=4)}}
+            <br>
+            {{form.submit}}
+        </p>
+    </form>
+
+{% endblock body_content %}
