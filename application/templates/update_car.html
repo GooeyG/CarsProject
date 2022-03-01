@@ -1,12 +1,18 @@
 {% block content %}
     <h1>Update Car</h1>
     <p>
-    {{new.id}}. Make <b>{{ new.make }}</b> Model <b>{{new.model}}</b> Registration <b>{{new.registration}}</b>
+    {{new.id}}. Engine ID <b>{{new.engine_id}}</b>Make <b>{{ new.make }}</b> Model <b>{{new.model}}</b> Registration <b>{{new.registration}}</b>
     </p>
 
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
+
+            <p>
+                {{ form.engine_id.label }}<br>
+                {{ form.engine_id (size=32) }}
+            </p>
+
             <p>
                 {{ form.make.label }}<br>
                 {{ form.make (size=32) }}

@@ -36,6 +36,7 @@ def add_car():
     if request.method == 'POST':
         if form.validate_on_submit():
             new_car = Car(
+            engine_id = request.form["engine_id"],
             make = request.form["make"],
             model = request.form["model"],
             registration = request.form["registration"]
@@ -76,6 +77,7 @@ def update_car(id):
     form = UpdateCar()
     new = Car.query.get(id)
     if request.method == 'POST' and form.validate_on_submit():
+        new.engine_id = form.engine_id.data
         new.make = form.make.data
         new.model = form.model.data
         new.registration = form.registration.data

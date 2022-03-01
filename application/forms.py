@@ -11,6 +11,7 @@ class EngineForm(FlaskForm):
 
 
 class CarForm(FlaskForm):
+    engine_id = StringField("Engine ID", validators=[DataRequired()])
     make = StringField("Make", validators=[DataRequired()])
     model = StringField("Model", validators=[DataRequired()])
     registration = StringField("Registration", validators=[DataRequired()])
@@ -23,6 +24,7 @@ class UpdateEngine(FlaskForm):
     submit = SubmitField('Submit')
 
 class UpdateCar(FlaskForm):
+    engine_id = StringField("Engine ID", validators=[DataRequired()])
     make = StringField("Make", validators=[DataRequired()])
     model = StringField("Model", validators=[DataRequired()])
     registration = StringField("Registration", validators=[DataRequired()])
