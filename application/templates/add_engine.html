@@ -2,11 +2,11 @@
 {% block body_content %}
     <form action='' method='POST'>
         {{ form.hidden_tag() }}
-        <p> {{ form.type.label }} {{ form.type }}</p>
+        <p> {{ form.style.label }} {{ form.type }}</p>
         <p> {{ form.cc.label }} {{ form.cc }}</p>
         <p> {{ form.power.label }} {{ form.power }}</p>
 
-        {% if form.type.errors %}
+        {% if form.style.errors %}
             {% for error in form.type.errors %}
                 {{ error }}<br>
             {% endfor %}

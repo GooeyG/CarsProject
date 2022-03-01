@@ -18,7 +18,7 @@ def add_engine():
     if request.method == 'POST':
         if form.validate_on_submit():
             new_engine = Engine(
-            type = request.form["type"],
+            style = request.form["style"],
             cc = request.form["cc"],
             power = request.form["power"]
             )
@@ -92,7 +92,7 @@ def update_engine(id):
     form = UpdateEngine()
     new = Engine.query.get(id)
     if request.method == 'POST' and form.validate_on_submit():
-        new.type = form.type.data
+        new.style = form.style.data
         new.cc = form.cc.data
         new.power = form.power.data
         db.session.commit()

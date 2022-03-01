@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, ValidationError, AnyOf
 
 
 class EngineForm(FlaskForm):
-    type = StringField("Type", validators=[DataRequired()])
+    style = StringField("style", validators=[DataRequired()])
     cc = IntegerField("cc", validators=[DataRequired()])
     power = IntegerField("BHP", validators=[DataRequired()])
     submit = SubmitField('Submit')
@@ -18,7 +18,7 @@ class CarForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class UpdateEngine(FlaskForm):
-    type = StringField("Type", validators=[DataRequired()])
+    style = StringField("style", validators=[DataRequired()])
     cc = IntegerField("cc", validators=[DataRequired()])
     power = IntegerField("BHP", validators=[DataRequired()])
     submit = SubmitField('Submit')

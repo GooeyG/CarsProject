@@ -4,10 +4,10 @@
 <p>Current database tables:</p>
 <br>
 <table>
-    <thead><tr><th>Engine ID</th><th>Engine Type</th><th>Engine CC</th><th>Engine Power</th><th></th></tr></thead>
+    <thead><tr><th>Engine ID</th><th>Engine style</th><th>Engine CC</th><th>Engine Power</th><th></th></tr></thead>
         {% for engine in engines  %}
             <tbody>
-                <tr><td>{{engine.id}}</td><td>{{engine.type}}</td><td>{{engine.cc}}</td><td>{{engine.power}}</td><td><form action="{{ url_for ('update_engine', id=engine.id) }}">
+                <tr><td>{{engine.id}}</td><td>{{engine.style}}</td><td>{{engine.cc}}</td><td>{{engine.power}}</td><td><form action="{{ url_for ('update_engine', id=engine.id) }}">
                     <button type= "submit">Update</button></td></tr>
             </tbody>
         </form>

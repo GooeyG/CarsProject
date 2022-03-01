@@ -1,15 +1,15 @@
 {% block content %}
     <h1>Update Engine</h1>
     <p>
-    {{new.id}}. Type <b>{{ new.type }}</b> CC <b>{{new.cc}}</b> Power <b>{{new.power}}</b>
+    {{new.id}}. Type <b>{{ new.style }}</b> CC <b>{{new.cc}}</b> Power <b>{{new.power}}</b>
     </p>
 
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
             <p>
-                {{ form.type.label }}<br>
-                {{ form.type (size=32) }}
+                {{ form.style.label }}<br>
+                {{ form.style (size=32) }}
             </p>
             <p>
                 {{ form.cc.label }}<br>
