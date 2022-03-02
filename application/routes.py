@@ -12,7 +12,7 @@ def index():
     return render_template('index.html', title='Home', engines=engines, cars=cars)
 
 
-@app.route("/add/engine", methods=['GET', 'POST'])
+@app.route("/add_engine", methods=['GET', 'POST'])
 def add_engine():
     form = EngineForm()
     if request.method == 'POST':
@@ -30,7 +30,7 @@ def add_engine():
     return render_template('add_engine.html', title="Add a new engine", form=form)
 
 
-@app.route("/add/car", methods=["GET", 'POST'])
+@app.route("/add_car", methods=["GET", 'POST'])
 def add_car():
     form = CarForm()
     if request.method == 'POST':
