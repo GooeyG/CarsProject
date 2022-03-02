@@ -2,7 +2,9 @@
 
 ## What my project shows
 
-* A python based web app with complete CRUD functionality.
+* A python based web app with complete CRUD functionality on two databases. 
+* A one-to-many relationship between two entities.
+* Unit testing with 9
 * Containers used to host my web application
 * Jenkins to test and build my application
 
