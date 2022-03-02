@@ -4,19 +4,22 @@
 <p>Current database tables:</p>
 <br>
 <table>
-    <thead><tr><th>Engine ID</th><th>Engine Type</th><th>Engine CC</th><th>Engine Power</th></tr></thead>
+    <thead><tr><th>Engine ID</th><th>Engine style</th><th>Engine CC</th><th>Engine Power</th><th></th></tr></thead>
         {% for engine in engines  %}
             <tbody>
-                <tr><td>{{engine.id}}</td><td>{{engine.type}}</td><td>{{engine.cc}}</td><td>{{engine.power}}</td></tr>
+                <tr><td>{{engine.id}}</td><td>{{engine.style}}</td><td>{{engine.cc}}</td><td>{{engine.power}}</td><td><form action="{{ url_for ('update_engine', id=engine.id) }}">
+                    <button type= "submit">Update</button></td></tr>
             </tbody>
+        </form>
         {% endfor %}
 </table>
 <br>
 <table>
-    <thead><tr><th>Car ID</th><th>Car Make</th><th>Car Model</th><th>Registration</th></tr></thead>
+    <thead><tr><th>Car ID</th><th>Car Make</th><th>Car Model</th><th>Registration</th><th>Engine ID</th><th></th></tr></thead>
         {% for car in cars  %}
             <tbody>
-                <tr><td>{{car.id}}</td><td>{{car.make}}</td><td>{{car.model}}</td><td>{{car.registration}}</td></tr>
+                <tr><td>{{car.id}}</td><td>{{car.make}}</td><td>{{car.model}}</td><td>{{car.registration}}</td><td>{{car.engine_id}}</td><td><form action="{{ url_for ('update_car', id=car.id) }}">
+                    <button type= "submit">Update</button></td></tr>
             </tbody>
         {% endfor %}
 </table>

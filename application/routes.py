@@ -12,13 +12,13 @@ def index():
     return render_template('index.html', title='Home', engines=engines, cars=cars)
 
 
-@app.route("/add/engine", methods=['GET', 'POST'])
+@app.route("/add_engine", methods=['GET', 'POST'])
 def add_engine():
     form = EngineForm()
     if request.method == 'POST':
         if form.validate_on_submit():
             new_engine = Engine(
-            type = request.form["type"],
+            style = request.form["style"],
             cc = request.form["cc"],
             power = request.form["power"]
             )
@@ -30,12 +30,13 @@ def add_engine():
     return render_template('add_engine.html', title="Add a new engine", form=form)
 
 
-@app.route("/add/car", methods=["GET", 'POST'])
+@app.route("/add_car", methods=["GET", 'POST'])
 def add_car():
     form = CarForm()
     if request.method == 'POST':
         if form.validate_on_submit():
             new_car = Car(
+            engine_id = request.form["engine_id"],
             make = request.form["make"],
             model = request.form["model"],
             registration = request.form["registration"]
@@ -76,6 +77,7 @@ def update_car(id):
     form = UpdateCar()
     new = Car.query.get(id)
     if request.method == 'POST' and form.validate_on_submit():
+        new.engine_id = form.engine_id.data
         new.make = form.make.data
         new.model = form.model.data
         new.registration = form.registration.data
@@ -90,7 +92,7 @@ def update_engine(id):
     form = UpdateEngine()
     new = Engine.query.get(id)
     if request.method == 'POST' and form.validate_on_submit():
-        new.type = form.type.data
+        new.style = form.style.data
         new.cc = form.cc.data
         new.power = form.power.data
         db.session.commit()
