@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh """ . ./venv/bin/activate
                 python3 -m pytest --junitxml unittests.xml
-                python3 -m pytest --cov-report xml:coverage.xml --cov=tests/""" 
+                python3 -m pytest --cov-report xml:coverage.xml --cov=testing/""" 
             }
         }
 // This stage builds the two containers and pushes to docker hub
