@@ -20,7 +20,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh """ . ./venv/bin/activate
-                python3 -m pytest --cov --cov-report term-missing""" 
+                python3 -m pytest --junitxml unittests.xml
+                python3 -m pytest --cov-report xml:coverage.xml --cov=tests/""" 
             }
         }
 // This stage builds the two containers and pushes to docker hub
