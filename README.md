@@ -27,13 +27,19 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
   ![Jenkins-install](https://i.ibb.co/ysQ51TR/Installing-Jenkins.png)
 
   I started with cloning down my repository to get my project onto my Jenkins VM. This isn't much use on it's own but it will be a good place to start. Here are the logs which show the repository was cloned down successfully.
-  
+
   ![Jenkins-log](https://i.ibb.co/DK6Qxxc/Jenkins-clone-github.png)
 
   As you can see here, the files were now able to be accessed on my Jenkins VM.
 
   ![Jenkins-VM-files](https://i.ibb.co/znfpsC5/Jenkins-clone-confirmed.png)
 
-  Obviously this is not very useful at all and it would have been much easier to simply git clone directly in my VM's terminal. I need to expand on this and get thing automated which leads me to the next step:
+  Obviously this is not very useful at all and it would have been much easier to simply git clone directly in my VM's terminal. I need to expand on this and get thing automated which leads me to the next step.
+
+  Here I have Jenkins pulling from the develop branch of my repository and it is setting up my Flask app on the VM and then running the unit tests. As you can see here the coverage report is 98%.
+
+  ![Jenkins-Tests](https://i.imgur.com/PgA0UZg.png)
+
+   Now that I have Jenkins successfully building my app and testing it, I want to automate everything with Docker.
 
   ![Docker-install](https://i.ibb.co/HPh4t5g/Docker-installation.png)
