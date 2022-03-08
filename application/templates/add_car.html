@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <form action='' method='POST'>
+        {{ form.hidden_tag() }}
+        <p> Engine ID: {{ form.engine_id }}</p>
+        <p> Car Make: {{ form.make }}</p>
+        <p> Car Model: {{ form.model }}</p>
+        <p> Registration: {{ form.registration }}</p>
+
+        {% if form.engine_id.errors %}
+            {% for error in form.engine_id.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.make.errors %}
+            {% for error in form.make.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.model.errors %}
+            {% for error in form.model.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.registration.errors %}
+            {% for error in form.registration.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+
+        {{ form.submit }}
+    </form>
+{% endblock body_content %}

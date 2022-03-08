@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <form action='' method='POST'>
+        {{ form.hidden_tag() }}
+        <p> {{ form.style.label }} {{ form.style }}</p>
+        <p> {{ form.cc.label }} {{ form.cc }}</p>
+        <p> {{ form.power.label }} {{ form.power }}</p>
+
+        {% if form.style.errors %}
+            {% for error in form.type.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.cc.errors %}
+            {% for error in form.cc.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {% if form.power.errors %}
+            {% for error in form.power.errors %}
+                {{ error }}<br>
+            {% endfor %}
+        {% endif %}
+
+        {{ form.submit }}
+    </form>
+{% endblock body_content %}
