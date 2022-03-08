@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        SECRET_KEY = credentials('SECRET_KEY')
-        DATABASE_URI = credentials('SQLALCHEMY_DATABASE_URI')
+        SECRET_KEY = "my-secret"
+        DATABASE_URI = "sqlite:///data.db"
         APP_RUN = 'True'
     }
 // This stage creates virtual environment for the python container
