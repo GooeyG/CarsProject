@@ -8,7 +8,9 @@
 * A one-to-many relationship between two entities.
 
   ![ERD](https://i.ibb.co/RYcYBz3/ERD-first.png)
-* Unit testing with 95%+ coverage. ![Testing](https://i.ibb.co/C8J4y93/Test-coverage.png)
+* Unit testing with 95%+ coverage. 
+
+![Testing](https://i.ibb.co/C8J4y93/Test-coverage.png)
 * Containers used to host my web application
 * Jenkins to test and build my application
 
@@ -16,7 +18,7 @@
 
 My kanban board features tags following MoSCoW priotisation technique, helping me achieve point targets based on the project marking criteria.
 **You can also click on each objective on the kanban board to access my user stories located in the comments of the objective itself.**
-I realize this isn't the ideal way to approach agile fundamentals in a devops environment but for the sake of the course it shows that I understand agile methodology. Eg. I didn't want to create sprints for this project as we have less than two weeks designated towards working on the project - Plus, all tasks are to be carried out by myself.
+I realize this isn't the ideal way to approach agile fundamentals in a devops environment but for the sake of the course it shows that I understand agile methodology. Eg. I didn't want to create sprints for this project as we have less than two weeks designated towards working on the project.
  
 ## Getting familiar with Jenkins
 
@@ -34,9 +36,9 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
 
   ![Jenkins-VM-files](https://i.ibb.co/znfpsC5/Jenkins-clone-confirmed.png)
 
-  Obviously this is not very useful at all and it would have been much easier to simply git clone directly in my VM's terminal. I need to expand on this and get thing automated which leads me to the next step.
+  Obviously this is not very useful at all and it would have been much easier to simply git clone directly in my VM's terminal. I need to expand on this and get things automated.
 
-  Here I have Jenkins pulling from the develop branch of my repository and it is setting up my Flask app on the VM and then running the unit tests. As you can see here the coverage report is 98%.
+  Here I have Jenkins pulling from the develop branch of my repository and it is setting up my Flask app on the VM and then running the unit tests. As you can see here the coverage report is 98%. At this point I am still using an sqlite database which I plan to later change to an SQL database hosted on a container.
 
   ![Jenkins-Tests](https://i.imgur.com/PgA0UZg.png)
 
