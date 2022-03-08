@@ -3,6 +3,7 @@ pipeline {
     environment {
         SECRET_KEY = "my-secret"
         DATABASE_URI = "sqlite:///data.db"
+        DOCKER_LOGIN = credentials('DOCKER_LOGIN')
         APP_RUN = 'True'
     }
 // This stage creates virtual environment for the python container
@@ -30,23 +31,6 @@ pipeline {
                 docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
                 docker push 1gooey1/webapp
                 cd db/"""
-            }
-        }
-// This stage copies a compose file into the manager node sshs into manager node of swarm and sets up the docker stack
-        stage('deploy') {
-            steps {
-                sh """scp scripts/docker-compose.yml jenkins@10.0.0.13:
-                ssh jenkins@10.0.0.13 'docker stack deploy --compose-file docker-compose.yml webapp'
-                """
-            }
-        }
-// This stage copies a conf file into the vm, sshs into the vm and sets up a load balancer with a nginx server
-        stage('create nginx load balancer') {
-            steps{
-                sh """scp scripts/nginx.conf jenkins@10.0.0.15:
-                ssh jenkins@10.0.0.15 'docker rm -f nginx'
-                ssh jenkins@10.0.0.15  'docker run -d -p 80:80 --name nginx --mount type=bind,source=/home/jenkins/nginx.conf,target=/etc/nginx/nginx.conf nginx'
-                """
             }
         }
 // publish test results onto jenkins screen
