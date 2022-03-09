@@ -27,7 +27,7 @@ My kanban board features tags following MoSCoW priotisation technique, helping m
 **You can also click on each objective on the kanban board to access my user stories located in the comments of the objective itself.**
 I realize this isn't the ideal way to approach agile fundamentals in a devops environment but for the sake of the course it shows that I understand agile methodology. Eg. I didn't want to create sprints for this project as we have less than two weeks designated towards working on the project.
  
-## Getting familiar with Jenkins
+## Getting familiar with Jenkins and Docker
 
 As I'm completely new to tech I wanted to experiment with jenkins, starting with simple things.
 
