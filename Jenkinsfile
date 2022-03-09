@@ -29,5 +29,5 @@ pipeline {
                 sh """docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
                 /"""
             }
-        }  
+    }   
 }
