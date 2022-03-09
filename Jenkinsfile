@@ -3,7 +3,6 @@ pipeline {
     environment {
         SECRET_KEY = "my-secret"
         DATABASE_URI = "sqlite:///data.db"
-        DOCKER_LOGIN = credentials('DOCKER_LOGIN')
         APP_RUN = 'True'
     }
 // This stage creates virtual environment for the python container
