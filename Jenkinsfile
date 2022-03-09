@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        SECRET_KEY = "my-secret"
-        DATABASE_URI = "sqlite:///data.db"
+        SECRET_KEY = credentials('SECRET_KEY')
+        DATABASE_URI = credentials('DATABASE_URI')
         DOCKER_LOGIN = credentials('DOCKER_LOGIN')
         APP_RUN = 'True'
     }
