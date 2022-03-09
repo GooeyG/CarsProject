@@ -27,7 +27,7 @@ pipeline {
 // This runs the app
         stage('run app') {
             steps {
-                sh """python app.py"""
+                sh """python3 app.py"""
             }
         }
 // This stage builds the two containers and pushes to docker hub
