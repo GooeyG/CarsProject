@@ -11,6 +11,11 @@
 * Unit testing with 95%+ coverage. 
 
 ![Testing](https://i.ibb.co/C8J4y93/Test-coverage.png)
+
+* Jenkins credentials used alongside environment variables to protect sensitive information.
+
+![Jenkins-credentials](https://i.ibb.co/2N2cLHP/Jenkins-credentials.png)
+
 * Containers used to host my web application
 * Jenkins to test and build my application
 
