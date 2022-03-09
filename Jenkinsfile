@@ -27,7 +27,8 @@ pipeline {
 // This runs the app
         stage('run app') {
             steps {
-                sh """python3 app.py"""
+                sh """ . ./venv/bin/activate
+                python3 app.py"""
             }
         }
 // This stage builds the two containers and pushes to docker hub
