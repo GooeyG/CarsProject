@@ -42,6 +42,14 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
 
   ![Jenkins-Tests](https://i.imgur.com/PgA0UZg.png)
 
-   Now that I have Jenkins successfully building my app and testing it, I want to automate everything with Docker.
+  Here we can see after my unit tests are completed Jenkins will run the app.
+
+  ![Jenkins-Running](https://i.ibb.co/ZGT33k4/Jenkins-running.png)
+
+  As you can see Jenkins and my app are running on the same IP address as they are both running on my VM. This doesn't really have any functionality as data for my tables would not persist. Doing things this way would also mean that while I am updating the build, the app would not be accessible. 
+
+  ![Jenkins-IP](https://i.ibb.co/1rgxYF5/Jenkins-running1.png)
+
+   Now that I have Jenkins successfully building my app, testing it and running it I need to move onto Docker. With Docker I hope to have my app accessible while applying updates and at the same time having the ability to deploy updates quicker.
 
   ![Docker-install](https://i.ibb.co/HPh4t5g/Docker-installation.png)

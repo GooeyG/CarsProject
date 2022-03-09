@@ -23,21 +23,11 @@ pipeline {
                 python3 -m pytest --cov --cov-report term-missing""" 
             }
         }
-
-// This runs the app
-        stage('run app') {
-            steps {
-                sh """ . ./venv/bin/activate
-                python3 app.py"""
-            }
-        }
 // This stage builds the two containers and pushes to docker hub
         stage('build and push') {
             steps {
-                sh """echo $DOCKER_LOGIN_PSW | docker login -u $DOCKER_LOGIN_USR --password-stdin
-                docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
-                docker push 1gooey1/webapp
-                cd db/"""
+                sh """docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
+                /"""
             }
         }
 // publish test results onto jenkins screen

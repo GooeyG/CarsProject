@@ -4,5 +4,6 @@ copy . .
 #ARG DATABASE_URI
 ENV SECRET_KEY=my-secret
 ENV DATABASE_URI=sqlite:///data.db
+EXPOSE 5000
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python3", "app.py"]
