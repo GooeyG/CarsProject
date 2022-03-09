@@ -30,14 +30,3 @@ pipeline {
                 /"""
             }
         }
-// publish test results onto jenkins screen
-        stage('post build - test results') {
-            steps{
-                junit 'unittests.xml'
-                cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
-archiveArtifacts artifacts: '*.xml', followSymlinks: false
-                emailext body: 'Your build $PROJECT_NAME - #$BUILD_NUMBER ran \n\n ${CHANGES} \n\n -------------------------------------------------- \n ${BUILD_LOG, maxLines=100, escapeHtml=false}', subject: 'Jenkins build completed', to: 'corcoran909@gmail.com'
-            }
-        }
-    }   
-}
