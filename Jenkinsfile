@@ -24,6 +24,13 @@ pipeline {
                 python3 -m pytest --cov --cov-report term-missing""" 
             }
         }
+
+// This runs the app
+        stage('run app') {
+            steps {
+                sh """python app.py"""
+            }
+        }
 // This stage builds the two containers and pushes to docker hub
         stage('build and push') {
             steps {
