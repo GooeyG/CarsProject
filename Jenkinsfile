@@ -6,7 +6,7 @@ pipeline {
         DOCKER_LOGIN = credentials('DOCKER_LOGIN')
         APP_RUN = 'True'
     }
-// This stage creates virtual environment for the python container
+// create virtual environment for the python container
     stages {
         stage('Setup') {
             steps {
@@ -17,14 +17,14 @@ pipeline {
                 """
             }
         }
-// This stage runs unit tests and saves them to files to be picked up post build 
+// run unit tests
         stage('Test') {
             steps {
                 sh """ . ./venv/bin/activate
                 python3 -m pytest --cov --cov-report term-missing""" 
             }
         }
-// This stage builds the two containers and pushes to docker hub
+// build image and push to docker hub
         stage('build and push') {
             steps {
                 sh """echo $DOCKER_LOGIN_PSW | docker login -u $DOCKER_LOGIN_USR --password-stdin
