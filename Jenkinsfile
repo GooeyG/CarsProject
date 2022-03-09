@@ -3,6 +3,7 @@ pipeline {
     environment {
         SECRET_KEY = "my-secret"
         DATABASE_URI = "sqlite:///data.db"
+        DOCKER_LOGIN = credentials('DOCKER_LOGIN')
         APP_RUN = 'True'
     }
 // This stage creates virtual environment for the python container
@@ -26,7 +27,9 @@ pipeline {
 // This stage builds the two containers and pushes to docker hub
         stage('build and push') {
             steps {
-                sh """docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
+                sh """echo $DOCKER_LOGIN_PSW | docker login -u $DOCKER_LOGIN_USR --password-stdin
+                docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
+                docker push 1gooey1/webapp
                 /"""
             }
     }   
