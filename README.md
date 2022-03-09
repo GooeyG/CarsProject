@@ -21,6 +21,8 @@
 
 * [Kanban Board](https://github.com/users/GooeyG/projects/1/views/1)
 
+  ![Kanban-image](https://i.ibb.co/RjRWSTB/Kanban-Board.png)
+
 My kanban board features tags following MoSCoW priotisation technique, helping me achieve point targets based on the project marking criteria.
 **You can also click on each objective on the kanban board to access my user stories located in the comments of the objective itself.**
 I realize this isn't the ideal way to approach agile fundamentals in a devops environment but for the sake of the course it shows that I understand agile methodology. Eg. I didn't want to create sprints for this project as we have less than two weeks designated towards working on the project.
@@ -58,3 +60,12 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
    Now that I have Jenkins successfully building my app, testing it and running it I need to move onto Docker. With Docker I hope to have my app accessible while applying updates and at the same time having the ability to deploy updates quicker.
 
   ![Docker-install](https://i.ibb.co/HPh4t5g/Docker-installation.png)
+
+  Before implenting credentials I was struggling to get Jenkins to push to Docker hub. My pipeline was getting to the end of the build and failing to push to my dockerhub account as it couldn't log in.
+
+  ![Docker-fail-image](https://i.ibb.co/LvgyM76/Docker-Image-Fail.png)
+
+  I added credentials to Jenkins which managed the username and password for docker hub. Now my Jenkinsfile has my dockerhub login information in a secure way. This was the last hurdle to getting a pipeline which pulls from github, builds an image and pushes it to dockerhub.
+
+  ![Docker-hub-image](https://i.ibb.co/xsscsHz/Docker-Image-built.png)
+  ![Docker-hub-account](https://i.ibb.co/6ZGPnvk/Dockerhub-Image.png)
