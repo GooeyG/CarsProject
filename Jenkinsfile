@@ -36,7 +36,7 @@ pipeline {
 // ssh into manager node and update service
         stage('deploy') {
             steps {
-                sh """ssh azureuser@10.0.0.9 docker stack deploy --compose-file docker-compose.yml webapp
+                sh """ssh jenkins@10.0.0.9 docker stack deploy --compose-file docker-compose.yml webapp
                 """
             }
         }   
