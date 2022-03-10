@@ -37,7 +37,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh """cd scripts/
-                docker stack deploy --compose-file ./scripts/docker-compose.yml webapp
+                docker stack deploy --compose-file scripts/docker-compose.yml webapp
                 """
             }
         }   
