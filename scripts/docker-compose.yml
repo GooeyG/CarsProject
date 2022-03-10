@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  webapp:
+    image: 1gooey1/webapp
+    ports:
+    - target: 5000
+      published: 5000
+    deploy:
+      replicas: 2
