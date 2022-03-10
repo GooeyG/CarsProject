@@ -36,8 +36,7 @@ pipeline {
 // This stage copies a compose file into the manager node sshs into manager node of swarm and sets up the docker stack
         stage('deploy') {
             steps {
-                sh """cd scripts/
-                docker stack deploy --compose-file . ./docker-compose.yml webapp
+                sh """docker stack deploy --compose-file docker-compose.yml webapp
                 """
             }
         }   
