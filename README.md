@@ -19,6 +19,10 @@
 * I made a risk assessment table to help me prioritize problems should any arise.
   ![Risk-assessment](https://i.ibb.co/NWTk51W/Risk-Assessment.png)
 
+* Here is a very simple diagram of my CI Pipeline. I used Github projects to keep track of jobs. Using Github as my repository, I am able to pull code down to any local machine with access to the internet, making my work very accessible. When I have made changes to the code on my local machine, I am able to push these changes to the Github repository. With a webhook configured, Jenkins will automatically build a new Docker image when any changes are made to the repository. This Docker image is pushed to my docker hub repository. Each new build is automatically tested by Jenkins using the unit tests I wrote with the pytest module. If the tests pass and the image is built, the app is deployed onto a Docker container which is hosted on a Azure Virtual Machine.
+  ![Pipeline](https://i.ibb.co/fVgJv5p/CI-Pipeline.png)
+  
+
 * [Kanban Board](https://github.com/users/GooeyG/projects/1/views/1)
 
   ![Kanban-image](https://i.ibb.co/cDYffRw/Kanban-Board.png)
