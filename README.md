@@ -10,18 +10,19 @@
   ![ERD](https://i.ibb.co/RYcYBz3/ERD-first.png)
 * Unit testing with 95%+ coverage. 
 
-![Testing](https://i.ibb.co/C8J4y93/Test-coverage.png)
+  ![Testing](https://i.ibb.co/C8J4y93/Test-coverage.png)
 
 * Jenkins credentials used alongside environment variables to protect sensitive information.
 
-![Jenkins-credentials](https://i.ibb.co/2N2cLHP/Jenkins-credentials.png)
+  ![Jenkins-credentials](https://i.ibb.co/2N2cLHP/Jenkins-credentials.png)
 
-* Containers used to host my web application
-* Jenkins to test and build my application
+* I made a risk assessment table to help me prioritize problems should any arise.
+  ![Risk-assessment](https://i.ibb.co/NWTk51W/Risk-Assessment.png)
 
 * [Kanban Board](https://github.com/users/GooeyG/projects/1/views/1)
 
-  ![Kanban-image](https://i.ibb.co/RjRWSTB/Kanban-Board.png)
+  ![Kanban-image](https://i.ibb.co/cDYffRw/Kanban-Board.png)
+  ![User-story](https://i.ibb.co/ZHhKjJN/User-Story.png)
 
 My kanban board features tags following MoSCoW priotisation technique, helping me achieve point targets based on the project marking criteria.
 **You can also click on each objective on the kanban board to access my user stories located in the comments of the objective itself.**
