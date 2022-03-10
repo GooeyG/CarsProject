@@ -36,8 +36,7 @@ pipeline {
 // This stage copies a compose file into the manager node sshs into manager node of swarm and sets up the docker stack
         stage('deploy') {
             steps {
-                sh """scp docker-compose.yml azureuser@10.0.0.9:
-                ssh azureuser@10.0.0.9 'docker stack deploy --compose-file docker-compose.yml webapp'
+                sh """ssh azureuser@10.0.0.9 'docker stack deploy --compose-file docker-compose.yml webapp'
                 """
             }
         }   
