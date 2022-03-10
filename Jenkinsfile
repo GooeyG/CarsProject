@@ -32,6 +32,14 @@ pipeline {
                 docker push 1gooey1/webapp
                 """
             }
+    }
+// This stage copies a compose file into the manager node sshs into manager node of swarm and sets up the docker stack
+        stage('deploy') {
+            steps {
+                sh """scp scripts/docker-compose.yml jenkins@10.0.0.13:
+                ssh jenkins@10.0.0.13 'docker stack deploy --compose-file docker-compose.yml webapp'
+                """
+            }
         }   
     }
 }
