@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.8"
 services:
   webapp:
     image: 1gooey1/webapp
@@ -6,4 +6,4 @@ services:
     - target: 5000
       published: 5000
     deploy:
-      replicas: 2
+      replicas: 3
