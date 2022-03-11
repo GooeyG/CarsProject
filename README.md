@@ -11,6 +11,8 @@
   ![Example](https://i.ibb.co/Yyg7WqR/Project-example.png)
 * A one-to-many relationship between two entities. At first my project was just one table with CRUD functionality, so I'm happy with one-to-many.
 
+* MySQL container used for a database service.
+
   ![ERD](https://i.ibb.co/RYcYBz3/ERD-first.png)
 * Unit testing with 95%+ coverage. 
 
@@ -20,6 +22,10 @@
 
   ![Jenkins-credentials](https://i.ibb.co/2N2cLHP/Jenkins-credentials.png)
 
+* Github repository webhook to trigger builds
+
+* Jenkins Pipeline with fully automated tests, build and deployment.
+
 * I made a risk assessment table to help me prioritize problems should any arise.
   ![Risk-assessment](https://i.ibb.co/NWTk51W/Risk-Assessment.png)
 
@@ -28,7 +34,6 @@
 
 * Here is a very simple diagram of my CI Pipeline. I used Github projects to keep track of jobs. Using Github as my repository, I am able to pull code down to any local machine with access to the internet, making my work very accessible. When I have made changes to the code on my local machine, I am able to push these changes to the Github repository. With a webhook configured, Jenkins will automatically build a new Docker image when any changes are made to the repository. This Docker image is pushed to my docker hub repository. Each new build is automatically tested by Jenkins using the unit tests I wrote with the pytest module. If the tests pass and the image is built, the app is deployed onto a Docker container which is hosted on a Azure Virtual Machine.
   ![Pipeline](https://i.ibb.co/fVgJv5p/CI-Pipeline.png)
-  
 
 * [Kanban Board](https://github.com/users/GooeyG/projects/1/views/1)
 
@@ -39,6 +44,10 @@ My kanban board features tags following MoSCoW priotisation technique, helping m
 **You can also click on each objective on the kanban board to access my user stories located in the comments of the objective itself.**
 I realize this isn't the ideal way to approach agile fundamentals in a devops environment but for the sake of the course it shows that I understand agile methodology. Eg. I didn't want to create sprints for this project as we have less than two weeks designated towards working on the project.
 
+Github projects served me well for a one person project. In a team setting I would have much prefered to use Jira as it has a lot more features. For example it has user stories built in with epics which Github projects does not. It has sprints and assigning different people to different tasks is a lot more in-depth with Jira.
+
+As I was doing this project alone I did not include documentation for anything like planning poker as I didn't think it was of use for a solo project. I did write user stories to get familiar with that and if this was a real-word project, I would have used those user stories with planning poker to estimate effort required for each user story task.
+
 ## What I would add if I had more time
 
 * More time spent learning HTML to make the webapp more aesethically pleasing
@@ -47,7 +56,9 @@ I realize this isn't the ideal way to approach agile fundamentals in a devops en
 * Search functionality to make the database easier to navigate.
 * A reserved IP for the Jenkins VM to avoid having to keep updating the webhook.
  
-## Getting familiar with Jenkins and Docker
+## Getting familiar with Jenkins and Docker - Changes I made along the way
+
+This section is to document changes in how I handled the pipeline.
 
 As I'm completely new to tech I wanted to experiment with jenkins, starting with simple things.
 
@@ -89,5 +100,7 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
 
   ![Docker-hub-image](https://i.ibb.co/xsscsHz/Docker-Image-built.png)
   ![Docker-hub-account](https://i.ibb.co/6ZGPnvk/Dockerhub-Image.png)
+
+  That concludes all documentation for my project!
 
  
