@@ -15,3 +15,4 @@ pytest-cov
 virtualenv
 virtualenv-clone
 pipenv
+PyMySQL
