@@ -31,7 +31,7 @@ pipeline {
                 sh """echo $DOCKER_LOGIN_PSW | docker login -u $DOCKER_LOGIN_USR --password-stdin
                 docker build --build-arg DATABASE_URI=$DATABASE_URI --build-arg SECRET_KEY=$SECRET_KEY -t 1gooey1/webapp .
                 docker push 1gooey1/webapp
-                cd db/
+                cd database/
                 docker build --build-arg MYSQL_ROOT_PASSWORD=$SQLPWD -t 1gooey1/mysql .
                 docker push 1gooey1/mysql
                 """
