@@ -17,6 +17,7 @@ class TestBase(TestCase):
     
     def setUp(self):
         # Create table schema
+        db.drop_all()
         db.create_all()
 
         # Create test Engine
