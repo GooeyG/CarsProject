@@ -22,7 +22,10 @@ pipeline {
         stage('Test') {
             steps {
                 sh """ . ./venv/bin/activate
-                python3 -m pytest --cov --cov-report""" 
+                python3 -m pytest --junitxml unittests.xml
+                python3 -m pytest --cov-report xml:coverage.xml --cov=tests/
+                deactivate
+                rm -rf /venv"""
             }
         }
 // build image and push to docker hub
