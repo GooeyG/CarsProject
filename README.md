@@ -1,5 +1,9 @@
 # QA community DevOps Project - Car/Engine tracker
 
+## Presentation video (click the image)
+
+[![QA Project](http://img.youtube.com/vi/NKx6GyYJ-jo/0.jpg)](http://www.youtube.com/watch?v=NKx6GyYJ-jo "QA Project Video")
+
 ## What my project shows
 
 * A python based web app with complete CRUD functionality on two databases. 
@@ -85,7 +89,5 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
 
   ![Docker-hub-image](https://i.ibb.co/xsscsHz/Docker-Image-built.png)
   ![Docker-hub-account](https://i.ibb.co/6ZGPnvk/Dockerhub-Image.png)
-
-  [![QA Project](http://img.youtube.com/vi/NKx6GyYJ-jo/0.jpg)](http://www.youtube.com/watch?v=NKx6GyYJ-jo "QA Project Video")
 
  
