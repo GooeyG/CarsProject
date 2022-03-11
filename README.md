@@ -86,4 +86,6 @@ As I'm completely new to tech I wanted to experiment with jenkins, starting with
   ![Docker-hub-image](https://i.ibb.co/xsscsHz/Docker-Image-built.png)
   ![Docker-hub-account](https://i.ibb.co/6ZGPnvk/Dockerhub-Image.png)
 
-  ![Final-video](https://www.youtube.com/watch?v=NKx6GyYJ-jo)
+  [![QA Project](http://img.youtube.com/vi/NKx6GyYJ-jo/0.jpg)](http://www.youtube.com/watch?v=NKx6GyYJ-jo "QA Project Video")
+
+ 
