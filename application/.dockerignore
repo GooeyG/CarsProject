@@ -1,0 +1,6 @@
+scripts/
+.dockerignore
+create.py
+*.md
+Dockerfile
+testing/

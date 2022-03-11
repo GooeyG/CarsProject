@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block body_content %}
-<p style="font-size:20px;"">Welcome to my QA Project</p>
+<p style="font-size:20px;">Welcome to my QA Project! something else</p>
 <p>Current database tables:</p>
 <br>
 <table>
@@ -21,6 +21,7 @@
                 <tr><td>{{car.id}}</td><td>{{car.make}}</td><td>{{car.model}}</td><td>{{car.registration}}</td><td>{{car.engine_id}}</td><td><form action="{{ url_for ('update_car', id=car.id) }}">
                     <button type= "submit">Update</button></td></tr>
             </tbody>
+        </form>
         {% endfor %}
 </table>
 

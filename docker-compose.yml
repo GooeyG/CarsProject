@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  webapp:
+    image: 1gooey1/webapp
+    ports:
+    - target: 5000
+      published: 5000
+    deploy:
+      replicas: 3
+  db:
+    image: 1gooey1/mysql
+    deploy:
+      replicas: 1
+    ports:
+      - target: 3306
+      - published: 3006

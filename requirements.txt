@@ -6,3 +6,13 @@ Jinja2
 MarkupSafe
 SQLAlchemy
 WTForms
+pytest
+Flask-Testing
+Flask-SQLAlchemy
+Flask-Bootstrap
+Flask-Bootstrap4
+pytest-cov
+virtualenv
+virtualenv-clone
+pipenv
+PyMySQL

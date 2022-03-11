@@ -1,0 +1,9 @@
+FROM python:3.9
+COPY . .
+ARG SECRET_KEY
+ARG DATABASE_URI
+ENV SECRET_KEY=$SECRET_KEY
+ENV DATABASE_URI=$DATABASE_URI
+EXPOSE 5000
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python3", "app.py"]
