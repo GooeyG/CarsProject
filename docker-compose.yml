@@ -6,7 +6,7 @@ services:
     - target: 5000
       published: 5000
     deploy:
-      replicas: 1
+      replicas: 3
   db:
     image: 1gooey1/mysql
     deploy:
