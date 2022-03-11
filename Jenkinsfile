@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh """ . ./venv/bin/activate
-                python3 -m pytest --cov --cov-report term-missing""" 
+                python3 -m pytest --cov --cov-report""" 
             }
         }
 // build image and push to docker hub
